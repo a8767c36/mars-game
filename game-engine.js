@@ -12,11 +12,11 @@ async function changeScene(name) {
 
 	// load the javascript
 	try{
-	module = await import(`/scene/${name}.js`);
+	var module = await import(`/scene/${name}.js`);
 	// import module should do only initialization
 	// and have no side effects.
 	module.show();
-	} catch(e) { }
+	} catch(e) { console.warn(e) }
 	// if this fails, it throws. doesn't matter.
 }
 

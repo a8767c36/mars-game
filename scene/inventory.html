@@ -37,6 +37,20 @@
       	background-color: #ccc;
       }
  
+      /* Define the styles for the food icon */
+      .food {
+      	background-image: url("/scene/inventory-food-1.png");
+      	background-size: cover;
+      }
+      .water {
+      	background-image: url("/scene/inventory-water-1.jpg");
+      	background-size: cover;
+      }
+      .fertilizer {
+      	background-image: url("/scene/inventory-fertilizer-1.jpg");
+      	background-size: cover;
+      }
+
       /* Define the styles for the water bottle */
       .water-bottle {
       }
@@ -53,9 +67,9 @@
 	At any time, press the U key to return to the inventory:<br><br>
 
 	<div class="shelf">
-		<div class="item clickable" onclick="changeScene('inventory-food')">Food</div>
-		<div class="item ">Water</div>
-		<div class="item ">Fertilizer</div>
+		<div class="item clickable food" onclick="changeScene('inventory-food')">Food</div>
+		<div class="item clickable water" onclick="changeScene('inventory-water')">Water</div>
+		<div class="item fertilizer">Fertilizer</div>
 		<div class="item ">Crops (potato)</div>
 		<div class="item ">Crops (onion)</div>
 		<div class="item ">Solar cells 20000m^2</div>
