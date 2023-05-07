@@ -1,12 +1,14 @@
 
 async function changeScene(name) {
 	// load the html
+	try {
 	var html = await fetch(`/scene/${name}.html`)
 	.then(response => {
 		if (response.ok) return response.text();
 		throw new Error("fetch failed", response.err);
 	})
 	document.querySelector("body").innerHTML = html;
+	} catch(e) { }
 
 	// load the javascript
 	try{
@@ -18,7 +20,7 @@ async function changeScene(name) {
 	// if this fails, it throws. doesn't matter.
 }
 
-changeScene("main")
+changeScene("inventory")
 
 window.changeScene = changeScene;
 
