@@ -1,0 +1,42 @@
+<title> Inventory: Water </title>
+
+<div class="container">
+	<div class="reliable-options">
+		<button>Extract from air</button>
+		<button>Buy</button>
+	</div>
+	<img src="/scene/inventory-water-3.png">
+	<div class="ore"><button>Underground exploration</button></div>
+</div>
+
+<style>
+.container {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-evenly;
+	
+}
+
+button {
+	position: relative;
+	padding: 10px 20px;
+	background-color: #00aaff;
+	color: #fff;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.reliable-options, .ore {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+}
+
+</style>
+
