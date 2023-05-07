@@ -13,5 +13,9 @@ seeds.salad = 20
 seeds.corn = 50
 seeds.pumpkin = 30
 
+export
+const foods = { };
+foods.rice = 2000;
+
 import("/scene/inventory.js").then(m => window.inventory = m)
 

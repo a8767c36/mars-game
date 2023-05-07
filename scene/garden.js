@@ -7,12 +7,31 @@ p.wheat = 0;
 p.corn = 0
 p.salad = 5
 
+const css_images = {
+	salad   : "/scene/garden-salad.png",
+	wheat   : "/scene/garden-wheat.png",
+	tomatoes: "/scene/garden-tomatoes.png",
+};
+
 export
 async function show () {
 	// plants
 	var ul = document.querySelector("#garden");
 	for (let f in p) {
-		$(ul).append(`<div class="item"> ${f}: ${p[f] ? p[f] + ' man-days' : 'none'}`);
+		$(ul).append(
+			$('<div class="item">')
+			.addClass(p[f] ? "clickable" : '')
+			.css("background-image", `url("${css_images[f]}")`)
+			.text(` ${f}: ${p[f] ? p[f] + ' man-days' : 'none'}`)
+			.on("click", p[f] ? function () {
+				if (p[f] > 0) {
+					p[f]--;
+					if (!(f in inventory.foods)) inventory.foods[f] = 0;
+					inventory.foods[f]++;
+				}
+				changeScene("garden")
+			} : null)
+		);
 	}
 
 	// seeds

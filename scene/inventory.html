@@ -50,6 +50,22 @@
       	background-image: url("/scene/inventory-fertilizer-1.jpg");
       	background-size: cover;
       }
+      .led {
+      	background-image: url("/scene/inventory-led.webp");
+      	background-size: cover;
+      }
+      .electric-cable {
+      	background-image: url("/scene/inventory-cable.jpg");
+      	background-size: cover;
+      }
+      .solar-cells {
+      	background-image: url("/scene/inventory-solar-cells-1.png");
+      	background-size: cover;
+      }
+      .medicine {
+      	background-image: url("/scene/inventory-medicine.avif");
+      	background-size: cover;
+      }
 
       /* Define the styles for the water bottle */
       .water-bottle {
@@ -72,14 +88,12 @@
 		<div class="item fertilizer">Fertilizer</div>
 		<div class="item ">Crops (potato)</div>
 		<div class="item ">Crops (onion)</div>
-		<div class="item ">Solar cells 20000m^2</div>
-		<div class="item ">cables 10000m</div>
-		<div class="item ">LEDs blue</div>
-		<div class="item ">LEDs red</div>
-		<div class="item ">LEDs white</div>
-		<div class="item ">Medicine</div>
-
-		<div class="item torch">Torch</div>
+		<div class="item solar-cells">Solar cells 20000m^2</div>
+		<div class="item electric-cable">cables 10000m</div>
+		<div class="item led">LEDs blue</div>
+		<div class="item led">LEDs red</div>
+		<div class="item led">LEDs white</div>
+		<div class="item clickable medicine" onclick="changeScene('inventory-medicine')">Medicine</div>
 	</div>
 
 

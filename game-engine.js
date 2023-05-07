@@ -20,7 +20,7 @@ async function changeScene(name) {
 	// if this fails, it throws. doesn't matter.
 }
 
-changeScene("inventory")
+changeScene("earth-goodbye")
 
 window.changeScene = changeScene;
 
