@@ -1,0 +1,72 @@
+    <title>Wooden Shelf</title>
+    <style>
+      /* Define the styles for the wooden shelf */
+      .shelf {
+			width: calc(100% - 32px);
+			border: 16px solid #6e5030;
+        height: 100%;
+        background-color: #ab6e2e; /* Use a brown color for the wooden shelf */
+        position: relative;
+        color: black;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        /* justify-content: space-evenly; */
+        justify-content: flex-start;
+        align-items: flex-end;
+        align-content: flex-start;
+        /* gap: 1.5in; */
+      }
+      
+      /* Define the styles for the items on the shelf */
+      .item {
+        margin: 0.3in 0.5in;
+        width: 100px;
+        height: 100px;
+        background-color: #fff; /* Use a white color for the items */
+        border-radius: 10px;
+        box-shadow: -6px 4px rgba(0,0,0,0.3);
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      
+      .clickable {
+      	cursor: pointer;
+      }
+      .clickable:active {
+      	background-color: #ccc;
+      }
+ 
+      /* Define the styles for the water bottle */
+      .water-bottle {
+      }
+      
+      /* Define the styles for the torch */
+      .torch {
+      }
+      
+      /* Define the styles for the tent */
+      .tent {
+      }
+    </style>
+
+	At any time, press the U key to return to the inventory:<br><br>
+
+	<div class="shelf">
+		<div class="item clickable" onclick="changeScene('inventory-food')">Food</div>
+		<div class="item ">Water</div>
+		<div class="item ">Fertilizer</div>
+		<div class="item ">Crops (potato)</div>
+		<div class="item ">Crops (onion)</div>
+		<div class="item ">Solar cells 20000m^2</div>
+		<div class="item ">cables 10000m</div>
+		<div class="item ">LEDs blue</div>
+		<div class="item ">LEDs red</div>
+		<div class="item ">LEDs white</div>
+		<div class="item ">Medicine</div>
+
+		<div class="item torch">Torch</div>
+	</div>
+
+
+

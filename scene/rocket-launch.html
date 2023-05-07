@@ -1,0 +1,39 @@
+	<title>Rocket to Mars</title>
+	<style>
+		.rocket {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			animation: move-rocket 10s linear infinite;
+		}
+
+		@keyframes move-rocket {
+			0% {
+				transform: translate(-50%, -50%);
+			}
+			50% {
+				transform: translate(-50%, -80%);
+			}
+			100% {
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		.launch-button {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			padding: 10px 20px;
+			background-color: #00aaff;
+			color: #fff;
+			font-size: 18px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+	<button class="launch-button" onclick="changeScene('mars-landing')">Goto Mars Now</button>
+	<div class="rocket">
+		<img src="https://media.istockphoto.com/id/465597106/vector/rocket-launch.jpg?s=612x612&w=0&k=20&c=hf_CuIA6QznwzcPAce9DxGKtWXc7fGMRGijyRLT7lXc=" alt="Rocket to Mars" width="128px;">
+	</div>

@@ -1,0 +1,39 @@
+
+<div style="" id="main">
+		<img src="/scene/mars-landing-2.jpg">
+</div>
+
+<style>
+#main {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+#main img {
+	height: 100%;
+}
+
+
+.get-out-button {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	padding: 10px 20px;
+	background-color: #00aaff;
+	color: #fff;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+</style>
+<button class="get-out-button" onclick="changeScene('mars-footsteps')">Get out of the rocket</button>
+
