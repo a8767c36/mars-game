@@ -7,7 +7,7 @@ async function changeScene(name) {
 		if (response.ok) return response.text();
 		throw new Error("fetch failed", response.err);
 	})
-	document.querySelector("body").innerHTML = html;
+	document.querySelector("body #scene").innerHTML = html;
 	} catch(e) { }
 
 	// load the javascript
@@ -20,7 +20,7 @@ async function changeScene(name) {
 	// if this fails, it throws. doesn't matter.
 }
 
-changeScene("earth-goodbye")
+changeScene("mars-base")
 
 window.changeScene = changeScene;
 

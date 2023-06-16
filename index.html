@@ -9,6 +9,32 @@ html {
 	background-color: black;
 	color: white;
 }
+
+#scene {
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+body {
+	display: flex;
+}
+
+#sidebar #expand-button {
+	font-size: 2em;
+	text-align: right;
+}
+#sidebar #nav {
+	display: none;
+}
+#sidebar:hover #nav {
+	display: block;
+}
+#sidebar #nav > div {
+	padding: 5px;
+	font-size: 1.2em;
+	cursor: pointer;
+	font-family: Papyrus;
+}
 </style>
 <script type="module" src="game-engine.js"></script>
 <script src="jquery-3.6.4.min.js"></script>
@@ -16,6 +42,12 @@ html {
 
 <body>
 
+<div id="scene"></div>
+
+<div id="sidebar">
+	<div id="expand-button">&#9776;</div>
+	<div id="nav"></div>
+</div>
 
 </body>
 </html>
