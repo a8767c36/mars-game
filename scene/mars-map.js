@@ -103,7 +103,7 @@ function drawBackground() {
 const css_images = {
 	"water-tank": "/scene/map-water-tank-1.png",
 	"garden"     : "/scene/map-garden.png",
-	"human-house": "/scene/map-human-house-1.jpeg",
+	"human-house": "/scene/map-human-house-2.gif",
 };
 
 const css_image_cache = { };
