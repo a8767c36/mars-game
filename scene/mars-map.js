@@ -101,8 +101,9 @@ function drawBackground() {
 }
 
 const css_images = {
-	garden: "/scene/map-garden.png",
 	"water-tank": "/scene/map-water-tank-1.png",
+	"garden"     : "/scene/map-garden.png",
+	"human-house": "/scene/map-human-house-1.jpeg",
 };
 
 const css_image_cache = { };
