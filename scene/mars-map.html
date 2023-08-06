@@ -1,6 +1,36 @@
-...
-Press B to go back to base.
 
-This map isn't done yet.
+<!-- the easiest thing would be a table -->
 
+<!-- but a table has no specific layout -->
+<!-- so a canvas is better i think -->
+
+<canvas id="mars-map"></canvas>
+
+<style>
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+	justify-content: center;
+}
+
+#scene {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#mars-map {
+	cursor: pointer;
+}
+
+@media (orientation: landscape) {
+	body {
+		flex-direction: row;
+	}
+}
+
+</style>
 

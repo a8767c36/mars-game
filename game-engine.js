@@ -20,7 +20,7 @@ async function changeScene(name) {
 	// if this fails, it throws. doesn't matter.
 }
 
-changeScene("mars-base")
+changeScene("mars-map")
 
 window.changeScene = changeScene;
 
