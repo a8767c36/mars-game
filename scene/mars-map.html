@@ -6,6 +6,29 @@
 
 <canvas id="mars-map"></canvas>
 
+<div id="over">
+<div id="close">x</div>
+<div id="info">spam</div>
+<div id="reset"><input type="button" value="Reset biome?"></div>
+<div id="build">
+	Change biome:<br>
+	<select>
+		<option value="">Empty</option>
+		<optgroup label="Water Supply">
+			<option value="water-tank">water tank</option>
+		</optgroup>
+		<optgroup label="Living Place">
+			<option value="green-house">green house</option>
+			<option value="human-house">human house</option>
+		</optgroup>
+		<optgroup label="Industry">
+		</optgroup>
+	</select>
+	<input type="button" value="Confirm!"><br>
+	<div id="build-cost"></div>
+</div>
+</div>
+
 <style>
 
 body {
@@ -24,6 +47,40 @@ body {
 
 #mars-map {
 	cursor: pointer;
+}
+
+#over {
+	display: none;
+	font-family: monospace;
+	margin: 4px;
+	border: 2px solid white;
+	border-radius: 16px;
+	padding: 8px 4px 4px;
+	position: absolute;
+	background: black;
+}
+
+#close {
+	position: absolute;
+	right: 8px;
+	top: 6px;
+	cursor: pointer;
+}
+
+#info {
+	white-space: pre;
+}
+
+#reset {
+	display: none;
+}
+
+#build {
+	display: none;
+}
+
+#build-cost {
+	white-space: pre;
 }
 
 @media (orientation: landscape) {
