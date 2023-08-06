@@ -84,7 +84,10 @@ async function show () {
 		}
 	});
 	$("#build input[type=button]").on("click", function() {
-		console.log("Selected value:", $("#build select").val());
+		var biome = $("#build select").val();
+		console.log("Selected value:", biome);
+		map[r] = biome;
+		changeScene("mars-map");
 	});
 }
 
@@ -99,6 +102,7 @@ function drawBackground() {
 
 const css_images = {
 	garden: "/scene/map-garden.png",
+	"water-tank": "/scene/map-water-tank-1.png",
 };
 
 const css_image_cache = { };
