@@ -1,6 +1,7 @@
 
 async function changeScene(name) {
 	location.hash = name;
+	$("#change-scene-sound")[0].play();
 
 	// load the html
 	try {
