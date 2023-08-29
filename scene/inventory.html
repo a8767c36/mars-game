@@ -11,7 +11,7 @@ body {
 }
 
 /* Define the styles for the wooden shelf */
-.shelf {
+#shelf {
 	width: calc(100% - 32px);
 	height: calc(100% - 32px);
 	border: 16px solid #6e5030;
@@ -30,21 +30,29 @@ body {
 }
 
 /* Define the styles for the items on the shelf */
-.item {
+#shelf > * {
 	display: block;
-  margin: 0.3in 0.5in;
-  width: 100px;
-  height: 100px;
-  background-color: #fff; /* Use a white color for the items */
-  border-radius: 10px;
-  box-shadow: -6px 4px rgba(0,0,0,0.3);
-  text-align: center;
-  font-weight: bold;
-  font-size: 16px;
+	margin: 0.3in 0.5in;
+	width: 100px;
+	height: 100px;
+	background-color: #fff; /* Use a white color for the items */
+	border-radius: 10px;
+	box-shadow: -6px 4px rgba(0,0,0,0.3);
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#shelf a {
+	text-decoration: inherit;
+	color: inherit;
 }
 
 .clickable {
 	cursor: pointer;
+}
+.clickable:hover {
+	box-shadow: -6px 4px rgba(0,0,0,0.7);
 }
 .clickable:active {
 	background-color: #ccc;
@@ -80,31 +88,18 @@ body {
 	background-size: cover;
 }
 
-/* Define the styles for the water bottle */
 .water-bottle {
 }
 
-/* Define the styles for the torch */
-.torch {
-}
-
-/* Define the styles for the tent */
-.tent {
-}
-
-a {
-	text-decoration: inherit;
-	color: inherit;
-}
 </style>
 
-<div class="shelf">
-	<a href="#solar-cells" class="item solar-cells">Solar cells</a>
-	<div class="item led">LEDs white</div>
-	<div class="item clickable medicine" onclick="changeScene('inventory-medicine')">Medicine</div>
-	<div class="item clickable food" onclick="changeScene('garden')">Food</div>
-	<div class="item clickable water" onclick="changeScene('water-tank')">Water</div>
-	<div class="item fertilizer">Fertilizer</div>
+<div id="shelf">
+	<a href="#solar-cells" class="clickable solar-cells">Solar cells</a>
+	<a class="led">LEDs white</a>
+	<a class="clickable medicine" href="#inventory-medicine">Medicine</a>
+	<a href="#garden" class="clickable food">Food</a>
+	<a class="clickable water" href="#water-tank">Water</a>
+	<a class="fertilizer">Fertilizer</a>
 </div>
 
 
