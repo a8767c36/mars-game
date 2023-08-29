@@ -51,8 +51,8 @@ async function show () {
 		var offX  = (e.offsetX || e.pageX - $(e.target).offset().left);
 		var offY  = (e.offsetY || e.pageY - $(e.target).offset().top );
 		var {width, height} = e.target.getBoundingClientRect();
-		var i = Math.floor(offX / width  * 4);
-		var j = Math.floor(offY / height * 4);
+		var i = Math.floor(offX / width  * 8);
+		var j = Math.floor(offY / height * 8);
 		console.log("i j", i, j);
 		r = `${i},${j}`;
 		biome = map[r];
@@ -68,8 +68,8 @@ async function show () {
 		var offX  = (e.offsetX || e.pageX - $(e.target).offset().left);
 		var offY  = (e.offsetY || e.pageY - $(e.target).offset().top );
 		var {width, height} = e.target.getBoundingClientRect();
-		var i = Math.floor(offX / width  * 4);
-		var j = Math.floor(offY / height * 4);
+		var i = Math.floor(offX / width  * 8);
+		var j = Math.floor(offY / height * 8);
 		console.log("i j", i, j);
 		r = `${i},${j}`;
 		biome = map[r];
@@ -77,7 +77,7 @@ async function show () {
 		// highlight the chosen biome a bit.
 		drawBackground();
 		drawBiomes();
-		ctx.strokeRect(160*i + 2, 160*j + 2, 156, 156);
+		ctx.strokeRect(80*i + 2, 80*j + 2, 76, 76);
 
 		// display information about the biome.
 		// in a modal window
@@ -124,6 +124,14 @@ async function show () {
 
 const backgroundImage = await loadImage("/scene/map-1.png");
 
+async function loadImage (url) {
+	let img = $("<img>").attr("src", url);
+	return new Promise((f, r) => {
+		img.on("load", () => f(img[0]));
+		img.on("error", err => r(err));
+	})
+}
+
 function drawBackground() {
 	var ctx = $("#mars-map")[0].getContext("2d");
 	ctx.canvas.width  = 640;
@@ -133,14 +141,6 @@ function drawBackground() {
 	//ctx.fillRect(0, 0, 640, 640);
 	let img = backgroundImage;
 	ctx.drawImage(img, 0, 0);
-}
-
-async function loadImage (url) {
-	let img = $("<img>").attr("src", url);
-	return new Promise((f, r) => {
-		img.on("load", () => f(img[0]));
-		img.on("error", err => r(err));
-	})
 }
 
 const css_images = {
@@ -159,15 +159,15 @@ await Promise.all(Object.keys(css_images).map(key => new Promise((f, r) =>
 
 function drawBiomes() {
 	var ctx = $("#mars-map")[0].getContext("2d");
-	for (let i = 0; i < 4; i++) {
-		for (let j = 0; j < 4; j++) {
-			ctx.strokeRect(160*i, 160*j, 160, 160);
+	for (let i = 0; i < 8; i++) {
+		for (let j = 0; j < 8; j++) {
+			ctx.strokeRect(80*i, 80*j, 80, 80);
 			var key = `${i},${j}`;
 			var biome = null;
 			var img = null;
 			if (key in map) biome = map[key];
 			if (biome in css_image_cache) img = css_image_cache[biome];
-			if (img) ctx.drawImage(img, 160*i + 2, 160*j + 2, 156, 156);
+			if (img) ctx.drawImage(img, 80*i, 80*j, 80, 80);
 		}
 	}
 }
