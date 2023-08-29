@@ -7,20 +7,9 @@ window.addEventListener("keydown", function (evt) {
 
 // add a navigation menu
 
-$("<div>Base</div>")
-.on("click", function () {
-	changeScene("base");
-})
-.appendTo("#nav");
+$("#nav").append(
+	$('<div><a href="#base"     > Base      </a></div>'),
+	$('<div><a href="#map"      > Mars Map  </a></div>'),
+	$('<div><a href="#inventory"> Inventory </a></div>')
+);
 
-$("<div>Mars Map</div>")
-.on("click", function () {
-	changeScene("map");
-})
-.appendTo("#nav");
-
-$("<div>Inventory</div>")
-.on("click", function () {
-	changeScene("inventory");
-})
-.appendTo("#nav");
