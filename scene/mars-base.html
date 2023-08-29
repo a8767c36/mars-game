@@ -18,6 +18,8 @@ body {
 }
 
 #scene {
+	height: 100%;
+	overflow: hidden;
 	display: flex;
 	justify-content: space-evenly;
 }
@@ -34,14 +36,15 @@ body {
 
 #scene > div > button {
 	position: absolute;
-	bottom: 1in;
-	left: 1in;
+	bottom: 1cm;
+	left: 50%;
+	transform: translate(-50%, 0);
 }
 
 button {
 	padding: 10px 20px;
-	background-color: #00aaff;
-	color: #fff;
+	background-color: olive;
+	color: white;
 	font-size: 18px;
 	border: none;
 	border-radius: 5px;
