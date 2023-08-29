@@ -10,13 +10,14 @@ html {
 	color: white;
 }
 
-#scene {
-	flex-grow: 1;
-	flex-shrink: 1;
+body {
+	position: relative;
 }
 
-body {
-	display: flex;
+#sidebar {
+	position: absolute;
+	top: 1cm;
+	right: 1cm;
 }
 
 #sidebar #expand-button {
@@ -28,6 +29,7 @@ body {
 }
 #sidebar:hover #nav {
 	display: block;
+	background-color: rgba(169, 133, 76, 0.28);
 }
 #sidebar #nav > div {
 	padding: 5px;

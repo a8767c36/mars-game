@@ -1,23 +1,41 @@
-<pre>Welcome to the Mars Base.
 
-You can either go outside
-
-or look at your inventory.</pre>
-
-<div class="buttons">
-<button onclick="changeScene('mars-map')">Go outside</button>
-<button onclick="changeScene('inventory')">Inventory</button>
+<div id="inside">
+	<img src="/scene/base-inside.jpg">
+	<button onclick="changeScene('inventory')">Inventory</button>
 </div>
-<pre>Press [B] to go back to the Base.</pre>
+
+<div id="outside">
+	<img src="/scene/base-outside.jpg">
+	<button onclick="changeScene('mars-map')">Go outside</button>
+</div>
+
+
 
 <style>
-body{
+body {
+	height: 100%;
+	margin: 0;
+}
+
+#scene {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#scene > div{
+	flex-grow: 1;
+	position: relative;
 	text-align: center;
 }
 
-.buttons {
-	display: flex;
-	justify-content: space-evenly;
+#scene > div > img {
+	height: 100%;
+}
+
+#scene > div > button {
+	position: absolute;
+	bottom: 1in;
+	left: 1in;
 }
 
 button {
