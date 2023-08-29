@@ -6,12 +6,9 @@
 <style>
 html {
 	height: 100%;
+	position: relative;
 	background-color: black;
 	color: white;
-}
-
-body {
-	position: relative;
 }
 
 #sidebar {
@@ -27,9 +24,11 @@ body {
 #sidebar #nav {
 	display: none;
 }
+#sidebar:hover {
+	background-color: rgba(169, 133, 76, 0.28);
+}
 #sidebar:hover #nav {
 	display: block;
-	background-color: rgba(169, 133, 76, 0.28);
 }
 #sidebar #nav > div {
 	padding: 5px;
