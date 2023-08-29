@@ -22,7 +22,7 @@ async function changeScene(name) {
 	// if this fails, it throws. doesn't matter.
 }
 
-changeScene("mars-base")
+changeScene("base")
 
 window.changeScene = changeScene;
 
