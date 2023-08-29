@@ -6,8 +6,22 @@ map["2,0"] = "garden";
 
 const cost = {
 	"water-tank": {
-		"bricks": 20,
-		"plastics": 10,
+		"metal": 8,
+		"energy": 3,
+	},
+	"garden": {
+		"glass": 150,
+		"energy": 25,
+		"biomass": 50,
+	},
+	"human-house": {
+		"bricks": 200,
+	},
+	"spaceship-site": null,
+	"garage": {
+		"metal": 20,
+		"energy": 15,
+		"glass": 10,
 	},
 };
 
@@ -28,11 +42,28 @@ async function show () {
 		changeScene("mars-map");
 	})
 
-	// install the onclick handler
+	// install the onclick handler (left/right click)
 	var r = null;
 	var biome = null;
 
 	$(ctx.canvas).on("click", function (e) {
+		// first, find out the biome that was clicked on.
+		var offX  = (e.offsetX || e.pageX - $(e.target).offset().left);
+		var offY  = (e.offsetY || e.pageY - $(e.target).offset().top );
+		var {width, height} = e.target.getBoundingClientRect();
+		var i = Math.floor(offX / width  * 4);
+		var j = Math.floor(offY / height * 4);
+		console.log("i j", i, j);
+		r = `${i},${j}`;
+		biome = map[r];
+		// navigate to that biome
+		if (biome) changeScene(biome);
+		else changeScene("mars-map");
+	});
+
+	$(ctx.canvas).on("contextmenu", function (e) {
+		e.preventDefault();
+
 		// first, find out the biome that was clicked on.
 		var offX  = (e.offsetX || e.pageX - $(e.target).offset().left);
 		var offY  = (e.offsetY || e.pageY - $(e.target).offset().top );
