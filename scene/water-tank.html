@@ -5,9 +5,9 @@
 <div id="more">
 	<div>Current amount: 1000 l</div>
 	<div>Get more water:</div>
-	<button>Underground exploration</button>
-	<button>Extract from air</button>
-	<button>Buy</button>
+	<div><button id="market">Buy</button></div>
+	<div><button id="air">Extract from air</button></div>
+	<div><button id="lehm">Search underground</button></div>
 </div>
 
 <!-- todo: conditional layout -->
@@ -36,8 +36,27 @@ body {
 }
 
 #scene #more {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-evenly;
 	margin: 1em;
 	overflow: auto;
+}
+
+#scene #more div {
+	margin: 6px;
+}
+
+#scene #more #market {
+	background: blue;
+}
+
+#scene #more #air {
+	background: green;
+}
+
+#scene #more #lehm {
+	background: maroon;
 }
 
 button {
