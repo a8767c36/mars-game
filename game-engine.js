@@ -1,5 +1,7 @@
 
 async function changeScene(name) {
+	location.hash = name;
+
 	// load the html
 	try {
 	var html = await fetch(`/scene/${name}.html`)
@@ -24,4 +26,9 @@ changeScene("mars-base")
 
 window.changeScene = changeScene;
 
-
+window.onhashchange = function () {
+	console.log("Hash changed");
+	var hash = location.hash.slice(1);
+	// remote the leading "#"
+	changeScene(hash);
+}
