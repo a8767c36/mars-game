@@ -29,24 +29,33 @@
 </div>
 </div>
 
+<div id="info">
+This is a map of your immediate surroundings.
+There is a bigger map of all the planet.
+This map only shows you approx 1 km².
+
+</div>
+
 <style>
 
 body {
-	display: flex;
-	flex-direction: column;
 	height: 100%;
 	margin: 0;
-	justify-content: center;
 }
 
 #scene {
+	height: 100%;
+	position: relative;
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 #mars-map {
 	cursor: pointer;
+}
+
+#info {
+	margin: 0.5cm;
 }
 
 #over {

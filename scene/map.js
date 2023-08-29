@@ -122,13 +122,25 @@ async function show () {
 	});
 }
 
+const backgroundImage = await loadImage("/scene/map-1.png");
+
 function drawBackground() {
 	var ctx = $("#mars-map")[0].getContext("2d");
 	ctx.canvas.width  = 640;
 	ctx.canvas.height = 640;
 	ctx.clearRect(0, 0, 640, 640);
-	ctx.fillStyle = "#945717";
-	ctx.fillRect(0, 0, 640, 640);
+	//ctx.fillStyle = "#945717";
+	//ctx.fillRect(0, 0, 640, 640);
+	let img = backgroundImage;
+	ctx.drawImage(img, 0, 0);
+}
+
+async function loadImage (url) {
+	let img = $("<img>").attr("src", url);
+	return new Promise((f, r) => {
+		img.on("load", () => f(img[0]));
+		img.on("error", err => r(err));
+	})
 }
 
 const css_images = {
