@@ -31,6 +31,7 @@ body {
 
 /* Define the styles for the items on the shelf */
 .item {
+	display: block;
   margin: 0.3in 0.5in;
   width: 100px;
   height: 100px;
@@ -90,18 +91,20 @@ body {
 /* Define the styles for the tent */
 .tent {
 }
+
+a {
+	text-decoration: inherit;
+	color: inherit;
+}
 </style>
 
 <div class="shelf">
+	<a href="#solar-cells" class="item solar-cells">Solar cells</a>
+	<div class="item led">LEDs white</div>
+	<div class="item clickable medicine" onclick="changeScene('inventory-medicine')">Medicine</div>
 	<div class="item clickable food" onclick="changeScene('garden')">Food</div>
 	<div class="item clickable water" onclick="changeScene('water-tank')">Water</div>
 	<div class="item fertilizer">Fertilizer</div>
-	<div class="item solar-cells">Solar cells 20000m^2</div>
-	<div class="item electric-cable">cables 10000m</div>
-	<div class="item led">LEDs blue</div>
-	<div class="item led">LEDs red</div>
-	<div class="item led">LEDs white</div>
-	<div class="item clickable medicine" onclick="changeScene('inventory-medicine')">Medicine</div>
 </div>
 
 
