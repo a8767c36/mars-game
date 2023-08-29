@@ -9,13 +9,13 @@ window.addEventListener("keydown", function (evt) {
 
 $("<div>Base</div>")
 .on("click", function () {
-	changeScene("mars-base");
+	changeScene("base");
 })
 .appendTo("#nav");
 
 $("<div>Mars Map</div>")
 .on("click", function () {
-	changeScene("mars-map");
+	changeScene("map");
 })
 .appendTo("#nav");
 

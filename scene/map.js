@@ -39,7 +39,7 @@ async function show () {
 	// hide over view
 	$("#over").css("display", "none");
 	$("#close").on("click", function() {
-		changeScene("mars-map");
+		changeScene("map");
 	})
 
 	// install the onclick handler (left/right click)
@@ -58,7 +58,7 @@ async function show () {
 		biome = map[r];
 		// navigate to that biome
 		if (biome) changeScene(biome);
-		else changeScene("mars-map");
+		else changeScene("map");
 	});
 
 	$(ctx.canvas).on("contextmenu", function (e) {
@@ -104,7 +104,7 @@ async function show () {
 	$("#reset").on("click", function() {
 		if (confirm("Reset biome?"))
 			map[r] = null;
-			changeScene("mars-map");
+			changeScene("map");
 	})
 	$("#build select").on("change", function(e) {
 		console.log("Change", e.target.value);
@@ -118,7 +118,7 @@ async function show () {
 		var biome = $("#build select").val();
 		console.log("Selected value:", biome);
 		map[r] = biome;
-		changeScene("mars-map");
+		changeScene("map");
 	});
 }
 
