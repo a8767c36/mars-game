@@ -1,12 +1,12 @@
 
 <div id="inside">
 	<img src="/scene/base-inside.jpg">
-	<button><a href="#inventory">Inventory</a></button>
+	<a href="#inventory">Inventory</a>
 </div>
 
 <div id="outside">
 	<img src="/scene/base-outside.jpg">
-	<button><a href="#map">Go outside</a></button>
+	<a href="#map">Go outside</a>
 </div>
 
 
@@ -34,26 +34,25 @@ body {
 	height: 100%;
 }
 
-#scene > div > button {
+#scene > div > a {
 	position: absolute;
 	bottom: 1cm;
 	left: 50%;
 	transform: translate(-50%, 0);
 }
 
-button {
+#scene a,
+#scene button {
+	display: block;
 	padding: 10px 20px;
 	background-color: olive;
 	color: white;
+	text-decoration: inherit;
+	font-family: Verdana;
 	font-size: 18px;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-}
-
-a {
-	color: inherit;
-	text-decoration: inherit;
 }
 
 </style>
