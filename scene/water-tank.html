@@ -1,24 +1,43 @@
-<title> Inventory: Water </title>
 
-<div class="container">
-	<div class="reliable-options">
-		<button>Extract from air</button>
-		<button>Buy</button>
-	</div>
-	<img src="/scene/inventory-water-3.png">
-	<div class="ore"><button>Underground exploration</button></div>
+<div id="meme">
+	<img src="/scene/water-tank.png">
+</div>
+<div id="more">
+	<div>Current amount: 1000 l</div>
+	<div>Get more water:</div>
+	<button>Underground exploration</button>
+	<button>Extract from air</button>
+	<button>Buy</button>
 </div>
 
+<!-- todo: conditional layout -->
+<!-- side-by-side on desktop, scroll down on mobile -->
+
+
 <style>
-.container {
-	position: absolute;
-	bottom: 0;
-	top: 0;
-	left: 0;
-	right: 0;
+body {
+	height: 100%;
+	margin: 0;
+}
+
+#scene {
+	height: 100%;
+	overflow: hidden;
 	display: flex;
-	justify-content: space-evenly;
-	
+	justify-content: flex-start;
+}
+
+#scene #meme {
+	height: 100%;
+}
+
+#scene img {
+	height: 100%;
+}
+
+#scene #more {
+	margin: 1em;
+	overflow: auto;
 }
 
 button {
@@ -30,12 +49,6 @@ button {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-}
-
-.reliable-options, .ore {
-	display: flex;
-	flex-flow: column;
-	justify-content: space-around;
 }
 
 </style>
