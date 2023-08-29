@@ -22,13 +22,13 @@ async function changeScene(name) {
 	// if this fails, it throws. doesn't matter.
 }
 
-changeScene("base")
-
-window.changeScene = changeScene;
-
 window.onhashchange = function () {
 	console.log("Hash changed");
 	var hash = location.hash.slice(1);
 	// remote the leading "#"
 	changeScene(hash);
 }
+
+changeScene("base")
+
+window.changeScene = changeScene;
