@@ -6,6 +6,9 @@ window.addEventListener("keydown", function (evt) {
 // event listener stays attached after scene changes.
 
 // add a navigation menu
+// make the navigation menu visible again
+
+$("#sidebar").css("visibility", "visible");
 
 $("#nav").append(
 	$('<div><a href="#base"     > Base      </a></div>'),
