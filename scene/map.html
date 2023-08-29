@@ -29,9 +29,9 @@
 </div>
 </div>
 
-<div id="info">
+<div id="noev">
 This is a map of your immediate surroundings.
-There is a bigger map of all the planet.
+There is a bigger map of all the planet <a href="#planet">here</a>.
 This map only shows you approx 1 km².
 
 Left-click on a cell to arrive at the building,
@@ -56,8 +56,14 @@ body {
 	cursor: pointer;
 }
 
-#info {
+#noev {
 	margin: 0.5cm;
+	white-space: pre;
+}
+
+#scene a {
+	text-decoration: inherit;
+	color: blue;
 }
 
 #over {
@@ -67,8 +73,8 @@ body {
 	border: 2px solid white;
 	border-radius: 16px;
 	padding: 8px 4px 4px;
-	position: absolute;
 	background: black;
+	position: relative;
 }
 
 #close {
