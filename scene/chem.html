@@ -1,2 +1,129 @@
-chemical laboratory
+
+<div id="shelf">
+	<div class="sect">
+		<div class="title">Chemische Grundstoffe</div>
+		<div class="chem" data-chem="h2">H₂-Gas</div>
+		<div class="chem" data-chem="gas">Erdgas</div>
+		<div class="chem" data-chem="oil">Erdöl flüssig</div>
+		<div class="chem" data-chem="tar">Teer</div>
+		<div class="chem" data-chem="coal">Pflanzenkohle</div>
+	</div>
+	<div class="sect">
+		<div class="title">Fermentation</div>
+		<div class="chem" data-chem="wabada">Wasser</div>
+		<div class="chem" data-chem="fluid">Gemischte Flüssigkeiten</div>
+		<div class="chem" data-chem="alc">Ethanol</div>
+		<div class="chem" data-chem="ferm">Ferment-Flüssigkeit</div>
+		<div class="chem" data-chem="stroh">Stroh (Biomasse)</div>
+	</div>
+	<div class="sect">
+		<div class="title">Holz & Pappe</div>
+		<div class="chem" data-chem="hemicell">Holzstoff</div>
+		<div class="chem" data-chem="papier">Papier</div>
+		<div class="chem" data-chem="pappe">Pappe & Karton</div>
+	</div>
+	<div class="sect">
+		<div class="title">Verschiedenes</div>
+		<div class="chem" data-chem="gewebe-l">Tuch (fein)</div>
+		<div class="chem" data-chem="gewebe-r">Tuch (grob)</div>
+		<div class="chem" data-chem="seil-l">Schnur (dünn)</div>
+		<div class="chem" data-chem="seil-r">Seil (dick)</div>
+	</div>
+</div>
+
+<style>
+body {
+	height: 100%;
+	margin: 0;
+}
+
+#scene {
+	height: 100%;
+	display: flex;
+	flex-flow: row;
+}
+
+/* Define the styles for the container shelf */
+#shelf {
+	height: calc(100% - 32px);
+	border: 16px solid gray;
+	overflow: auto;
+
+	background-color: silver; /* Use a brown color for the wooden shelf */
+	position: relative;
+	color: black;
+	display: flex;
+	flex-flow: column;
+	/* justify-content: space-evenly; */
+	justify-content: flex-start;
+	/* gap: .5in; */
+}
+
+#shelf > .sect > .title {
+	text-align: center;
+	margin: 4px 0 10px 0;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+/* Define the styles for the items on the shelf */
+#shelf .chem {
+	margin: 5px 5px;
+}
+
+/* Define the styles for the chem icon */
+.chem .icon {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-image: url("/scene/chem-1.avif");
+	background-size: cover;
+	border-radius: 10px;
+}
+.chem .desc {
+	display: inline-block;
+	vertical-align: top;
+	margin: 6px;
+}
+.chem .title {
+	display: block;
+	font-weight: bold;
+	font-size: 15px;
+	margin: 2px;
+}
+.chem .info {
+	display: block;
+	font-size: 8px;
+	margin: 4px;
+}
+</style>
+
+
+
+
+<div id="dim">
+	Experimente:<br><br>
+
+	<!-- es gibt keine neuen experimente.
+	falls du ein neues experiment haben willst,
+	dann baue ein gebäude dafür -->
+
+	H₂-Synthese<br><br>
+
+	Destillation<br><br>
+
+	Fermentation<br><br>
+
+	Oil Reformation<br><br>
+
+	Faserchemie (Pappe, Gewebe)<br><br>
+</div>
+
+<style>
+
+#dim {
+	margin: 6px;
+}
+
+</style>
 
