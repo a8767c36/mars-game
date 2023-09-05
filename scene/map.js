@@ -122,8 +122,10 @@ async function show () {
 	});
 }
 
+export
 const backgroundImage = await loadImage("/scene/map-1.png");
 
+export
 async function loadImage (url) {
 	let img = $("<img>").attr("src", url);
 	return new Promise((f, r) => {
