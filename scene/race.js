@@ -6,8 +6,8 @@ let canvas = null;
 let ctx = null;
 
 // racing variables
-let x = 0;
-let y = 0;
+let x = 240;
+let y = 240;
 let phase = 0;
 let v = 0;
 let t = 0;
@@ -18,6 +18,20 @@ const PI  = Math.PI ;
 export
 function show () {
 	canvas = $("#race")[0];
+
+	canvas.focus();
+	canvas.onkeydown = function (evt) {
+		// console.log("canvas keydown", evt.key);
+		if (evt.key == "ArrowUp") v = v + 15;
+		if (evt.key == "ArrowDown") v = v - 15;
+		if (evt.key == "ArrowRight") phase = phase + 15/360*2*PI;
+		if (evt.key == "ArrowLeft") phase = phase - 15/360*2*PI;
+
+		if (v < 30) v = 30;
+		if (v > 120) v = 120;
+		// console.log("v", v, "phase", phase);
+	};
+
 	ctx = canvas.getContext("2d");
 	// start animating, automatically stops
 	requestAnimationFrame(function (ms) {
@@ -51,8 +65,12 @@ function animate (ms) {
 	ctx.fill();
 
 	//ctx.drawArrow(v*cos(phase), v*sin(phase));
-	//ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(x, y);
+	ctx.lineTo(x + v*cos(phase), y + v*sin(phase));
+	ctx.strokeStyle = "cyan";
+	ctx.stroke();
 
-	//requestAnimationFrame(animate);
+	requestAnimationFrame(animate);
 }
 
