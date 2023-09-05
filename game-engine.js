@@ -30,6 +30,6 @@ window.onhashchange = function () {
 	changeScene(hash);
 }
 
-changeScene("race")
+changeScene("base")
 
 window.changeScene = changeScene;
