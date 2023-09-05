@@ -11,8 +11,8 @@ window.addEventListener("keydown", function (evt) {
 $("#sidebar").css("visibility", "visible");
 
 $("#nav").append(
-	$('<div><a href="#base"     > Base      </a></div>'),
 	$('<div><a href="#map"      > Mars Map  </a></div>'),
+	$('<div><a href="#base"     > Base      </a></div>'),
 	$('<div><a href="#inventory"> Inventory </a></div>')
 );
 
