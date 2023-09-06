@@ -102,27 +102,40 @@ body {
 
 
 <div id="dim">
-	Experimente:<br><br>
+	<div class="title">Experimente</div>
 
 	<!-- es gibt keine neuen experimente.
 	falls du ein neues experiment haben willst,
 	dann baue ein gebäude dafür -->
 
-	H₂-Synthese<br><br>
+	<a href="#chem-h2" class="ex">H₂-Synthese</a>
 
-	Destillation<br><br>
+	<a class="ex">Destillation</a>
 
-	Fermentation<br><br>
+	<a class="ex">Fermentation</a>
 
-	Oil Reformation<br><br>
+	<a class="ex">Oil Reformation</a>
 
-	Faserchemie (Pappe, Gewebe)<br><br>
+	<a class="ex">Faserchemie (Pappe, Gewebe)</a>
 </div>
 
 <style>
 
 #dim {
-	margin: 6px;
+	display: flex;
+	flex-flow: column;
+}
+
+#dim > * {
+	margin: 8px;
+}
+
+#dim > .title {
+	text-decoration: underline;
+}
+
+#dim > .ex {
+
 }
 
 </style>
