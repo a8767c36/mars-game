@@ -149,9 +149,10 @@ function drawBackground() {
 }
 
 const css_images = {
-	"water-tank": "/scene/map-water-tank-1.png",
+	"water-tank" : "/scene/map-water-tank-1.png",
 	"garden"     : "/scene/map-garden.png",
 	"human-house": "/scene/map-human-house-2.gif",
+	"energy"     : "/scene/inventory-solar-cells-1.png",
 };
 
 const css_image_cache = { };
