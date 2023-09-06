@@ -108,6 +108,9 @@ async function show () {
 	})
 	$("#build select").on("change", function(e) {
 		console.log("Change", e.target.value);
+		// in the future, don't show build costs anymore.
+		// instead, a limited number of instances can be built
+		// from the resources of a single ship.
 		$("#build-cost").text(`Will cost:\n`);
 		var c = cost[e.target.value] || { };
 		for (let i in c) {
