@@ -1,8 +1,24 @@
 
 export const map = { };
-map["0,0"] = "garden";
-map["1,0"] = "garden";
-map["2,0"] = "garden";
+map["0,0"] = "lehm";
+map["1,0"] = "lehm";
+map["2,0"] = "lehm";
+
+map["1,1"] = "energy";
+map["2,1"] = "energy";
+
+map["1,3"] = "garden";
+map["2,3"] = "garden";
+map["3,3"] = "garden";
+map["4,3"] = "garden";
+
+map["2,4"] = "rannara"; // rakete
+map["3,4"] = "human-house";
+map["4,4"] = "human-house";
+
+map["4,5"] = "water-tank";
+map["5,5"] = "water-tank";
+map["6,5"] = "water-tank";
 
 const cost = {
 	"water-tank": {
@@ -149,10 +165,12 @@ function drawBackground() {
 }
 
 const css_images = {
+	"lehm"       : "/scene/lehm.png",
 	"water-tank" : "/scene/map-water-tank-1.png",
 	"garden"     : "/scene/map-garden.png",
 	"human-house": "/scene/map-human-house-2.gif",
 	"energy"     : "/scene/inventory-solar-cells-1.png",
+	"rannara"    : "/scene/rocket-launch.jpg",
 };
 
 const css_image_cache = { };
