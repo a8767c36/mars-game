@@ -1,13 +1,11 @@
 
-const shelf = {
+export
+const data = {
 	h2: 1,
 	gas: 1,
 }
 
-export
-const data = {
-	shelf: shelf
-}
+const shelf = data;
 
 export
 function show () {
