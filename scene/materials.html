@@ -1,16 +1,87 @@
 
-<img src="/scene/material-lehm-bauwerk-1.jpg">
+<title>Materialien</title>
+
+<div id="index">
+	<div>
+		<a class="clickable lehm" href="#material-lehm">Lehm</a>
+	</div>
+	<div>
+		<a class="clickable ziegel" href="#material-ziegel">Ziegel</a>
+		<img src="/scene/material-lehm-ziegel.webp">
+	</div>
+</div>
+
 
 <style>
 html, body, #scene {
-	margin: 0;
 	height: 100%;
+	margin: 0;
 	overflow: hidden;
 }
 
-#scene {
+/* Define the styles for the wooden shelf */
+#index {
+	width: calc(100% - 32px);
+	height: calc(100% - 32px);
+	border: 16px solid transparent;
+	overflow: auto;
+
+	background-color: transparent; /* Use a brown color for the wooden shelf */
+	position: relative;
+	color: black;
 	display: flex;
 	justify-content: space-evenly;
+	align-items: flex-start;
+	/* flex-wrap: wrap; */
+	/* align-content: flex-start; */
+	/* gap: 1.5in; */
+}
+
+/* Define the styles for the items on the shelf */
+#index > div > a {
+	display: block;
+	margin: 0.3in 0.5in;
+	width: 100px;
+	height: 100px;
+	background-color: #fff; /* Use a white color for the items */
+	border-radius: 10px;
+	box-shadow: -6px 4px rgba(0,0,0,0.3);
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#index > div > img {
+	width: 200px;
+}
+
+#index a {
+	text-decoration: inherit;
+	color: inherit;
+}
+
+.clickable {
+	cursor: pointer;
+}
+.clickable:hover {
+	box-shadow: -6px 4px rgba(0,0,0,0.7);
+}
+.clickable:active {
+	background-color: #ccc;
+}
+
+/* Define the styles for the food icon */
+.food {
+	background-image: url("/scene/inventory-food-1.png");
+	background-size: cover;
+}
+.lehm {
+	background-image: url("/scene/material-lehm.webp");
+	background-size: cover;
+}
+.ziegel {
+	background-image: url("/scene/material-ziegel.webp");
+	background-size: cover;
 }
 
 </style>

@@ -1,0 +1,38 @@
+
+<div id="diff">
+
+	<div id="in">
+		<img src="/scene/material-lehm-1.jpg">
+		<img src="/scene/material-lehm-3.jpg">
+	</div>
+
+	<div id="out">
+		<img src="/scene/material-lehm-5.jpg">
+		<img src="/scene/material-lehm-4.jpg">
+	</div>
+
+</div>
+
+
+<style>
+
+html, body, #scene {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+}
+
+#diff {
+	display: flex;
+	height: 100%;
+}
+
+#diff>* {
+	width: 50%;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-evenly;
+}
+
+</style>
+
