@@ -1,0 +1,32 @@
+* Treibstoffverbrauch:
+* berechnen wie viel treibstoff ein starship zum mars braucht
+* berechnen wie viele starships vom boden abheben müssen, damit ein starship zum mars kommt
+* berechnen wie viele booster/ships es braucht
+
+* Anmerkung: Vor-/Nachteile von Ionenantrieb
+* Vorteil: weniger treibstoff vom boden -> weniger materialverbrauch --> weniger starships starten
+* Nachteil: langsamer, unflexibel, nicht magisch. konkret: solarzellen autonom ausfahren
+* Nachteil: Ionenantrieb würde zusätzliche entwicklung brauchen. nicht bezahlbar/gebraucht.
+
+* Berechnung von Treibstoffverbrauch / numerische Simulation
+* Differentialgleichung. Variablen: Ort, Geschwindigkeit, Beschleunigung/Kraft, Treibstoff (Masse).
+* Ort: x, Geschwindigkeit: v, Beschleunigung: a, Kraft: F, Treibstoff: m.
+* x' = v
+* v' = a - g(x)
+* F = m*a, a = F/m
+* m' = -F/C
+* wobei C eine geeignete Konstante ist.
+* Ideale Bauweise eines Raketentriebwerks (Reaktor):
+* Die Gase (Sauerstoff + Methan) werden erhitzt.
+* Dann treten sie in den Reaktor ein.
+* Dort mischen sie sich und verbrennen sofort.
+* Im Reaktor entsteht eine gewisse Temperatur.
+* Der Reaktor hat eine kleine Öffnung nach unten, durch die heißes Gas entweicht.
+* Das Gas, da es heiß ist, hat einen gewissen Druck. Dadurch entweicht das Gas
+  mit einer gewissen Geschwindigkeit.
+* Diese Geschwindigkeit ist es, die interessant ist. Die Austrittsgeschwindigkeit.
+* Nach der Impulsgleichung ist die Gesamtimpulsänderung null.
+* Ein Impuls des austretenden Gases beschleunigt die Rannara nach vorne.
+
+* Starship Raptor Austrittsgeschwindigkeit (bzw. spezifischer Impuls): 3.5 km/s.
+
