@@ -29,4 +29,18 @@
 * Ein Impuls des austretenden Gases beschleunigt die Rannara nach vorne.
 
 * Starship Raptor Austrittsgeschwindigkeit (bzw. spezifischer Impuls): 3.5 km/s.
-
+* Die Konstante C ist der spezifische Impuls.
+* Das Gleichungssystem lautet nun:
+* x' = v
+* v' = a - g(x)
+* F = m*a, a = F/m
+* m' = -F/C
+* Das lässt sich umformen zu:
+* x'' =  F/m - g(x)
+* m'  = -F/C
+* Es gilt für Starship Raptor:
+* F = 2.5 MN
+* C = 3.5 km/s
+* Daraus folgt:
+* m(t) = m(0) - 714*t kg/s
+* g(x) = 10 m/s^2 / (x/(6000 km))^2
