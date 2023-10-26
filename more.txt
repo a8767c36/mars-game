@@ -42,5 +42,9 @@
 * F = 2.5 MN
 * C = 3.5 km/s
 * Daraus folgt:
-* m(t) = m(0) - 714*t kg/s
+* m(t) = m(0) - 714*t kg/s + leergewicht
 * g(x) = 10 m/s^2 / (x/(6000 km))^2
+* Dann hat das Gleichungssystem nur noch eine wichtige Gleichung:
+* x'' =  F/m - g(x)
+* Diese lässt sich jetzt numerisch berechnen.
+
