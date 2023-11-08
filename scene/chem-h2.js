@@ -4,7 +4,7 @@ import {lager, ex} from '/scene/chem.js';
 import("/scene/chem-h2.js").then(h2 => ex.h2 = h2);
 
 export
-let enabled = false;
+let enabled = true;
 
 export
 function show () {
