@@ -1,0 +1,23 @@
+@media (orientation: portrait) {
+
+	#scene {
+		display: none !important;
+	}
+
+	#sidebar {
+		display: none !important;
+	}
+
+	html {
+		background-color: #ddd !important;
+	}
+
+	body {
+		background-position: center;
+		background-image: url("rotate.png");
+		background-size: 50%;
+		background-repeat: no-repeat;
+	}
+
+}
+
