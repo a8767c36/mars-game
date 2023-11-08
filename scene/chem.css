@@ -7,6 +7,7 @@ body {
 	height: 100%;
 	display: flex;
 	flex-flow: row;
+	justify-content: space-between;
 }
 
 
@@ -72,25 +73,81 @@ body {
 	margin: 4px;
 }
 
+#spacer {
+	width: 1in;
+}
 
 
 
 
 
+/* Define the styles for the container */
 #dim {
+	height: calc(100% - 32px);
+	border: 16px solid #6e5030;
+	overflow: auto;
+
+	background-color: #ab6e2e; /* Use a brown color for the wooden shelf */
+	position: relative;
+	color: black;
 	display: flex;
 	flex-flow: column;
+	/* justify-content: space-evenly; */
+	justify-content: flex-start;
+	/* gap: .5in; */
 }
 
-#dim > * {
-	margin: 8px;
+#dim > .group > .title {
+	text-align: center;
+	margin: 4px 0 10px 0;
+	font-weight: bold;
+	font-size: 16px;
 }
 
-#dim > .title {
-	text-decoration: underline;
+/* Define the styles for the items on the shelf */
+#dim .ex {
+	margin: 5px 5px;
+}
+#dim a.ex {
+	display: block;
 }
 
-#dim > .ex {
-
+/* Define the styles for the chem icon */
+.ex .icon {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-image: url("/scene/chem-ex.webp");
+	background-size: cover;
+	border-radius: 10px;
 }
+.ex .icon.lit {
+	background-image: url("/scene/chem-ex-lit-2.webp");
+}
+.ex .desc {
+	display: inline-block;
+	vertical-align: top;
+	margin: 6px;
+}
+.ex .title {
+	display: block;
+	font-weight: bold;
+	font-size: 15px;
+	margin: 2px;
+}
+.ex .info {
+	display: block;
+	font-size: 8px;
+	margin: 4px;
+}
+
+
+
+
+
+
+
+
+
+
 
