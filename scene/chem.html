@@ -6,6 +6,7 @@ vll. noch ein buch (unten), auf das man klicken kann, um
 prozessbeschreibungen aufzurufen (so eine art wiki).
 -->
 
+<link rel="stylesheet" href="scene/chem.css">
 
 <!-- hier kommt ein bild hin -->
 <!-- das bild ist eine art werkbank, und auf dieser stehen flaschen -->
@@ -41,77 +42,8 @@ prozessbeschreibungen aufzurufen (so eine art wiki).
 	</div>
 </div>
 
-<style>
-body {
-	height: 100%;
-	margin: 0;
-}
 
-#scene {
-	height: 100%;
-	display: flex;
-	flex-flow: row;
-}
-
-/* Define the styles for the container shelf */
-#shelf {
-	height: calc(100% - 32px);
-	border: 16px solid #6e5030;
-	overflow: auto;
-
-	background-color: #ab6e2e; /* Use a brown color for the wooden shelf */
-	position: relative;
-	color: black;
-	display: flex;
-	flex-flow: column;
-	/* justify-content: space-evenly; */
-	justify-content: flex-start;
-	/* gap: .5in; */
-}
-
-#shelf > .sect > .title {
-	text-align: center;
-	margin: 4px 0 10px 0;
-	font-weight: bold;
-	font-size: 16px;
-}
-
-/* Define the styles for the items on the shelf */
-#shelf .chem {
-	margin: 5px 5px;
-}
-
-/* Define the styles for the chem icon */
-.chem .icon {
-	display: inline-block;
-	width: 50px;
-	height: 50px;
-	background-image: url("/scene/chem-bottle-glass.webp");
-	background-size: cover;
-	border-radius: 10px;
-}
-.chem .icon.full {
-	background-image: url("/scene/chem-bottle-honey.webp");
-}
-.chem .desc {
-	display: inline-block;
-	vertical-align: top;
-	margin: 6px;
-}
-.chem .title {
-	display: block;
-	font-weight: bold;
-	font-size: 15px;
-	margin: 2px;
-}
-.chem .info {
-	display: block;
-	font-size: 8px;
-	margin: 4px;
-}
-</style>
-
-
+<div id="spacer"></div>
 
 
 <div id="dim">
@@ -131,25 +63,4 @@ body {
 
 	<a class="ex">Faserchemie (Pappe, Gewebe)</a>
 </div>
-
-<style>
-
-#dim {
-	display: flex;
-	flex-flow: column;
-}
-
-#dim > * {
-	margin: 8px;
-}
-
-#dim > .title {
-	text-decoration: underline;
-}
-
-#dim > .ex {
-
-}
-
-</style>
 
