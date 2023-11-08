@@ -10,7 +10,8 @@
 window.addEventListener("click", async function () {
 	// if on mobile device, then go fullscreen.
 	// we need to be fullscreen to change the orientation.
-	if (screen.orientation.type.startsWith("portrait"))
+	if (screen.orientation.type.startsWith("portrait")) {
 		await document.body.requestFullscreen();
-	await screen.orientation.lock("landscape");
+		await screen.orientation.lock("landscape");
+	}
 })
