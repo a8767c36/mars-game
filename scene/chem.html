@@ -1,4 +1,14 @@
+<!--
+wie es nachher ausschaut:
+links eine werkbank, auf der gefäße stehen (material),
+rechte verschiedene vorrichtungen, um prozesse zu starten (arbeit),
+vll. noch ein buch (unten), auf das man klicken kann, um
+prozessbeschreibungen aufzurufen (so eine art wiki).
+-->
 
+
+<!-- hier kommt ein bild hin -->
+<!-- das bild ist eine art werkbank, und auf dieser stehen flaschen -->
 <div id="shelf">
 	<div class="sect">
 		<div class="title">Chemische Grundstoffe</div>
@@ -46,10 +56,10 @@ body {
 /* Define the styles for the container shelf */
 #shelf {
 	height: calc(100% - 32px);
-	border: 16px solid gray;
+	border: 16px solid #6e5030;
 	overflow: auto;
 
-	background-color: silver; /* Use a brown color for the wooden shelf */
+	background-color: #ab6e2e; /* Use a brown color for the wooden shelf */
 	position: relative;
 	color: black;
 	display: flex;
@@ -76,9 +86,12 @@ body {
 	display: inline-block;
 	width: 50px;
 	height: 50px;
-	background-image: url("/scene/chem-1.avif");
+	background-image: url("/scene/chem-bottle-glass.webp");
 	background-size: cover;
 	border-radius: 10px;
+}
+.chem .icon.full {
+	background-image: url("/scene/chem-bottle-honey.webp");
 }
 .chem .desc {
 	display: inline-block;
