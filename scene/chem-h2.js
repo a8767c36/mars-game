@@ -1,8 +1,10 @@
 
-import {data as lager} from '/scene/chem.js';
+import {lager, ex} from '/scene/chem.js';
+
+import("/scene/chem-h2.js").then(h2 => ex.h2 = h2);
 
 export
-let enabled = 0;
+let enabled = false;
 
 export
 function show () {

@@ -1,12 +1,16 @@
 
-export
-const data = {
+const shelf = {
 	h2: 1,
 	gas: 1,
-}
+};
 
-const shelf = data;
-const ex = { "h2": true };
+export
+const lager = shelf;
+
+export
+const ex = { };
+
+
 
 export
 function show () {
@@ -30,10 +34,10 @@ function show () {
 		let cls  = $(div).data("ex");
 		$(div).empty();
 		$(div).append(
-			$('<span class="icon"></span>').toggleClass("lit", ex[cls] ? true : false),
+			$('<span class="icon"></span>').toggleClass("lit", ex[cls]?.enabled ? true : false),
 			$('<span class="desc"></span>').append(
 				$('<span class="title"></span>').text(text),
-				$('<span class="info"></span>').text(ex[cls] ? "Running" : "Stopped")
+				$('<span class="info"></span>').text(ex[cls]?.enabled ? "Running" : "Stopped")
 			)
 		);
 	}
