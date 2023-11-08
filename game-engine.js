@@ -30,6 +30,6 @@ window.onhashchange = function () {
 	changeScene(hash);
 }
 
-changeScene("earth-goodbye")
+changeScene(location.hash ? location.hash.slice(1) : "earth-goodbye")
 
 window.changeScene = changeScene;
