@@ -1,29 +1,47 @@
 
-<a id="inos"  href="#inos"><video src="/scene/rannara-inos.mp4"  autoplay loop></video></div>
-<a id="heres" href="#base"><video src="/scene/rannara-heres.mp4" autoplay loop></video></div>
+
+<img src="/scene/rannara.jpg">
 
 <style>
-body {
+
+html, body, #scene {
 	height: 100%;
 	margin: 0;
+	overflow: hidden;
 }
 
 #scene {
-	height: 100%;
 	display: flex;
+	justify-content: center;
 }
 
-#scene > a {
-	display: block;
-	width: 50%;
-	display: flex;
-	flex-flow: column;
-	justify-content: space-evenly;
+img {
+	background: white;
 }
 
-#scene > * > img {
-	width: 50%;
-	margin: auto;
+
+button {
+	position: relative;
+	padding: 10px 20px;
+	background-color: #00aaff;
+	color: #fff;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: inherit;
+	color: inherit;
 }
 
 </style>
+
+
+<div style="position: absolute; top: 1in; left: 1in;">
+
+	<a href="#rannara-fly"><button>Launch Ship</button></a>
+
+</div>
+
