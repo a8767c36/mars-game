@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<meta charset="utf-8">
 
 <!-- darum muss das gesamte spiel im landscape mode sein.
 
@@ -17,59 +18,212 @@ ein handy müsste man dann halt quer (landscape) halten.
 
 <!-- a few style adaptations -->
 <style>
-html {
+html, body {
 	height: 100%;
-	position: relative;
 	background-color: black;
 	color: white;
 	font-family: Verdana;
 }
 
-#sidebar {
-	position: absolute;
-	top: 1cm;
-	right: 1cm;
+body {
+	display: flex;
 }
 
-#sidebar #expand-button {
-	font-size: 2em;
+#sidebar {
+	border-width: 1rem 0 1rem 0;
+	border: solid #6e5030;
+	background-color: #6e5030;
+}
+#sidebar #button-expand {
+	font-size: 2rem;
 	text-align: right;
 }
-#sidebar #nav {
+#sidebar a {
+	display: block;
+	white-space: nowrap;
+
+	color: inherit;
+	text-decoration: inherit;
+}
+#sidebar a .description {
 	display: none;
 }
+
+/* if hovering over sidebar */
 #sidebar:hover {
-	background-color: rgba(169, 133, 76, 0.28);
+	border: 1rem solid #6e5030;
+	background-color: #ab6e2e; /* Use a brown color for the wooden shelf */
+
+	padding-right: 0.5rem;
 }
-#sidebar:hover #nav {
-	display: block;
+
+#sidebar:hover a .description {
+	display: inline-block;
 }
-#sidebar #nav > div {
+
+audio {
+	display: none;
+}
+
+</style>
+<script src="jquery-3.6.4.min.js"></script>
+<script type="module" src="game-engine.js"></script>
+</head>
+
+<body>
+
+<div id="sidebar">
+	<div id="button-expand">«»</div>
+
+	<div id="index">
+		<a href="#rannara">
+			<span class="rannara clickable icon"></span>
+			<span class="description">Raumfahrt</span>
+		</a>
+
+		<!-- <a href="https://www.freepik.com/icon/solar-panel_3463440">Icon by Freepik</a> -->
+		<a href="#energy">
+			<span class="clickable energy icon"></span>
+			<span class="description">Energie&nbsp; -- Akkus</span>
+		</a>
+
+		<a href="#acker">
+			<span class="clickable robotics icon"></span>
+			<span class="description">Transport & Acker</span>
+		</a>
+		<a href="#chem">
+			<span class="clickable chem icon"></span>
+			<span class="description">Chemistry, Plastik</span>
+		</a>
+
+		<!-- <a href="#garden" class="clickable food">Gemüse</a> -->
+		<a href="#water-tank">
+			<span class="clickable water icon"></span>
+			<span class="description">Wasser & Gemüse</span>
+		</a>
+		<!-- todo: icon wasser/gemüse einfügen -->
+		<a>
+			<span class="fertilizer icon"></span>
+			<span class="description">Sewer System</span>
+		</a>
+		<a href="#materials">
+			<span class="materials clickable icon"></span>
+			<span class="description">
+				Müll.
+				Metall.
+				Keramik, Glas, Ziegel.
+			</span>
+		</a>
+	</div>
+
+	<audio id="change-scene-sound" src="mixkit-cool-interface-click-tone-2568.wav"></audio>
+</div>
+
+<div id="scene"></div>
+
+</body>
+</html>
+
+<style>
+
+/* Define the styles for the wooden shelf */
+
+#sidebar a {
+	margin: 1rem 0 1rem 0;
+
+	text-decoration: inherit;
+	color: inherit;
+}
+
+/* Define the styles for the items on the shelf */
+#sidebar a .icon {
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	background-color: #fff; /* Use a white color for the items */
+	border-radius: 10px;
+	box-shadow: -6px 4px rgba(0,0,0,0.3);
+	text-align: center;
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+/* ??? */
+#sidebar a .description {
 	padding: 5px;
 	font-size: 1.2em;
 	cursor: pointer;
 	font-family: Papyrus;
 }
-#sidebar a {
-	color: inherit;
-	text-decoration: inherit;
+
+#sidebar a .description {
+	color: black;
+}
+
+
+
+.clickable {
+	cursor: pointer;
+}
+.clickable:hover {
+	box-shadow: -6px 4px rgba(0,0,0,0.7);
+}
+.clickable:active {
+	background-color: #ccc;
+}
+
+/* Define the styles for the food icon */
+.food {
+	background-image: url("/scene/inventory-food-1.png");
+	background-size: cover;
+}
+.acker {
+	background-image: url("/scene/acker.webp");
+	background-size: cover;
+}
+.water {
+	background-image: url("/scene/water-salad.png");
+	background-size: cover;
+}
+.chem {
+	background-image: url("/scene/chem-2.png");
+	background-size: cover;
+}
+.fertilizer {
+	background-image: url("/scene/inventory-fertilizer-1.jpg");
+	background-size: cover;
+}
+.rannara {
+	background-image: url("/scene/rocket-launch.jpg");
+	background-size: cover;
+}
+.electronics {
+	background-image: url("/scene/inventory-led.webp");
+	background-size: cover;
+}
+.industry {
+	background-image: url("/scene/chem-fire.avif");
+	background-size: cover;
+}
+.robotics {
+	background-image: url("/scene/acker-robo-3.png");
+	background-size: cover;
+}
+.electric-cable {
+	background-image: url("/scene/inventory-cable.jpg");
+	background-size: cover;
+}
+.energy {
+	background-image: url("/scene/energy-solar-1-2.png");
+	background-size: cover;
+}
+.materials {
+	background-image: url("/scene/inventory-bricks.webp");
+	background-size: cover;
+}
+
+.water-bottle {
 }
 
 </style>
-<script type="module" src="game-engine.js"></script>
-<script src="jquery-3.6.4.min.js"></script>
-</head>
 
-<body>
-
-<div id="scene"></div>
-
-<div id="sidebar">
-	<div id="expand-button">&#9776;</div>
-	<div id="nav"></div>
-</div>
-
-<audio id="change-scene-sound" src="mixkit-cool-interface-click-tone-2568.wav"></audio>
-
-</body>
-</html>
