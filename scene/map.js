@@ -169,7 +169,7 @@ const css_images = {
 	"water-tank" : "/scene/map-water-tank-1.png",
 	"garden"     : "/scene/map-garden.png",
 	"human-house": "/scene/map-human-house-2.gif",
-	"energy"     : "/scene/inventory-solar-cells-1.png",
+	"energy"     : "/scene/energy-solar-1.png",
 	"rannara"    : "/scene/rocket-launch.jpg",
 };
 
