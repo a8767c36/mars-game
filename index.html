@@ -31,19 +31,34 @@ body {
 }
 
 #sidebar {
-	border-width: 1rem 0 1rem 0;
 	border: solid #6e5030;
+	border-width: 1rem 0 1rem 0;
 	background-color: #6e5030;
+	color: black;
 }
-#sidebar #button-expand {
+#sidebar.big {
+	border: solid #6e5030;
+	border-width: 1rem 1rem 1rem 1rem;
+	background-color: #ab6e2e; /* Use a brown color for the wooden shelf */
+}
+#sidebar .tracker {
 	font-size: 2rem;
-	text-align: right;
+	white-space: nowrap;
+	text-align: center;
+	cursor: pointer;
 }
-#sidebar #button-expand img {
+#sidebar .tracker:hover {
+	color: white;
+}
+#sidebar .tracker .in,
+#sidebar .tracker img {
+	display: none;
+}
+#sidebar .tracker img {
 	height: 2rem;
 }
 #sidebar a {
-	display: block;
+	display: flex;
 	white-space: nowrap;
 
 	color: inherit;
@@ -54,15 +69,22 @@ body {
 }
 
 /* if hovering over sidebar */
-#sidebar:hover {
-	border: 1rem solid #6e5030;
-	background-color: #ab6e2e; /* Use a brown color for the wooden shelf */
-
+#sidebar.big {
 	padding-right: 0.5rem;
 }
+#sidebar.big .tracker .in,
+#sidebar.big .tracker img {
+	display: inline;
+}
+#sidebar.big .tracker .out {
+	display: none;
+}
 
-#sidebar:hover a .description {
+#sidebar.big a .description {
 	display: inline-block;
+	padding-top: 0.5rem;
+	font-size: 1rem;
+	padding-left: 1rem;
 }
 
 #sidebar audio {
@@ -81,13 +103,14 @@ body {
 <body>
 
 <div id="sidebar">
-	<div id="button-expand">
+	<div class="tracker" onclick="$('#sidebar').toggleClass('big')">
 		<!-- <a href="https://www.freevector.com/crossroads-sign">FreeVector.com</a> -->
+		<span class="in">«</span>
 		<img src="/scene/index-2.png">
-		«»
+		<span class="out">»</span>
 	</div>
 
-	<div id="index">
+	<div id="index" onclick="$('#sidebar').removeClass('big')">
 		<a href="#rannara">
 			<span class="rannara clickable icon"></span>
 			<span class="description">Raumfahrt</span>
@@ -160,28 +183,9 @@ body {
 	font-size: 1rem;
 }
 
-/* ??? */
-#sidebar a .description {
-	padding: 5px;
-	font-size: 1.2em;
-	cursor: pointer;
-	font-family: Papyrus;
-}
 
-#sidebar a .description {
-	color: black;
-}
-
-
-
-#sidebar .clickable {
-	cursor: pointer;
-}
-#sidebar .clickable:hover {
+#sidebar a:hover .clickable {
 	box-shadow: -6px 4px rgba(0,0,0,0.7);
-}
-#sidebar .clickable:active {
-	background-color: #ccc;
 }
 
 /* Define the styles for the food icon */
