@@ -26,6 +26,7 @@ html, body {
 }
 
 body {
+	margin: 0;
 	display: flex;
 }
 
@@ -37,6 +38,9 @@ body {
 #sidebar #button-expand {
 	font-size: 2rem;
 	text-align: right;
+}
+#sidebar #button-expand img {
+	height: 2rem;
 }
 #sidebar a {
 	display: block;
@@ -61,8 +65,12 @@ body {
 	display: inline-block;
 }
 
-audio {
+#sidebar audio {
 	display: none;
+}
+
+#scene {
+	flex-grow: 1;
 }
 
 </style>
@@ -73,7 +81,11 @@ audio {
 <body>
 
 <div id="sidebar">
-	<div id="button-expand">«»</div>
+	<div id="button-expand">
+		<!-- <a href="https://www.freevector.com/crossroads-sign">FreeVector.com</a> -->
+		<img src="/scene/index-2.png">
+		«»
+	</div>
 
 	<div id="index">
 		<a href="#rannara">
