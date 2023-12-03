@@ -20,24 +20,12 @@ map["4,5"] = "water-tank";
 map["5,5"] = "water-tank";
 map["6,5"] = "water-tank";
 
+
 const cost = {
-	"water-tank": {
-		"metal": 8,
-		"energy": 3,
+	"energy": {
+		"solar-panels": 1000,
 	},
-	"garden": {
-		"glass": 150,
-		"energy": 25,
-		"biomass": 50,
-	},
-	"human-house": {
-		"bricks": 200,
-	},
-	"spaceship-site": null,
-	"garage": {
-		"metal": 20,
-		"energy": 15,
-		"glass": 10,
+	"acker": {
 	},
 };
 

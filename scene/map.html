@@ -1,18 +1,4 @@
 <!--
-solar panels vs plants:
-all calculations on inos.
-solar irradiation is 1000 W/m²
-solar panels give 200 W/m².
-plants give 7500 kg/10 000 m²/year.
-that is 750 g/m²/year.
-that is 12 MJ/m²/year.
-that is 32 kJ/day.
-that is 0.38 J/s.
-that is 0.38 W of power.
-that is ~1/1000 the efficiency of solar panels.
--->
-
-<!--
 ich würde hier keine map als gitter machen.
 damit man ordentliche stadtplanung macht,
 muss man das studiert haben.
@@ -23,88 +9,16 @@ besser wäre es, bei dingen, die eh klar sind,
 vorgefertigte bauteile zu liefern.
 -->
 
-<img style="height: 100%" src="/schema/Siedlungsbau.png"><br><br>
-
-
-
-
-<div id="noev">
-This is a map of your immediate surroundings.
-There is a bigger map of all the planet <a href="#planet">here</a>.
-This map only shows you approx 1 km².
-
-Left-click on a cell to arrive at the building,
-right-click on a cell to change the building.
-
-Click <a href="#race">here</a> to race.
-</div>
+<img src="/schema/Siedlungsbau.png">
 
 <style>
 
-body {
-	height: 100%;
-	margin: 0;
-}
-
 #scene {
-	height: 100%;
-	position: relative;
+	min-width: 1px; /* idk why we need this, but we do */
+	flex: 1 0 1px; /* grow shrink basis */
+
 	display: flex;
-	justify-content: flex-start;
-}
-
-#mars-map {
-	cursor: pointer;
-}
-
-#noev {
-	margin: 0.5cm;
-	white-space: pre;
-}
-
-#scene a {
-	text-decoration: inherit;
-	color: blue;
-}
-
-#over {
-	display: none;
-	font-family: monospace;
-	margin: 4px;
-	border: 2px solid white;
-	border-radius: 16px;
-	padding: 8px 4px 4px;
-	background: black;
-	position: relative;
-}
-
-#close {
-	position: absolute;
-	right: 8px;
-	top: 6px;
-	cursor: pointer;
-}
-
-#info {
-	white-space: pre;
-}
-
-#reset {
-	display: none;
-}
-
-#build {
-	display: none;
-}
-
-#build-cost {
-	white-space: pre;
-}
-
-@media (orientation: landscape) {
-	body {
-		flex-direction: row;
-	}
+	justify-content: center;
 }
 
 </style>
