@@ -1,0 +1,52 @@
+<!--
+hier kann man ein programm schreiben, um ein feld zu ernten
+ich würde gerne eine mincraft-turtle-microscene einfügen.
+aber das ist leider nicht so einfach.
+
+darum machen wir etwas anderes.
+wir bauen einen simulator für ein fahrzeug (drama).
+dieses fahrzeug kann programmiert werden, und dann
+können befehle an das fahrzeug geschickt werden.
+
+idealerweise funktioniert es so, dass die befehle
+stattdessen auch an eine echte maschine geschickt werden können.
+
+leider ist das nicht so einfach. echte maschinen verwenden meistens C.
+C in einer webumgebung auszuführen ist nicht so einfach.
+darum verwenden wir stattdessen javascript-module.
+dabei ist es eigentlich egal, ob das modul in javascript geschrieben ist
+oder einer anderen programmiersprache.
+hauptsache, es exportiert die relevanten funktionen.
+
+? wie wird das programm hochgeladen.
+: das programm ist irgendwo im internet, wenn auch nur im intranet.
+von dort wird es geladen, d.h. es wird referenziert.
+der einfachheit halber ist es aber auch möglich,
+eine einzelne javascript- oder webassembly-datei hineinzuziehen.
+dann wird das genauso gehandhabt.
+. für den anfang wird das die möglichkeit sein, die ich realisiere.
+
+! mache einen file-drop-here-dialog.
+! import die datei und finde die exportierte funktion.
+
+-->
+
+
+
+<canvas id="canvas-background"></canvas>
+<canvas id="canvas-foreground"></canvas>
+
+<style>
+
+#scene {
+	display: flex;
+	justify-content: center;
+	min-width: 1px;
+}
+
+#canvas-background {
+	display: none;
+}
+
+</style>
+
