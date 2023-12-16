@@ -1,0 +1,120 @@
+Grundsätzliche Fragen
+=====================
+
+Menschen brauchen ein continuous-life-support-system brauchen.
+Das bedeutet, dass die Umgebungsvariablen permanent in einem für Menschen
+annehmbaren Bereich gehalten werden müssen.
+
+Das umfasst insbesondere:
+* Temperatur
+* Sauerstoff-Partialdruck
+* Wasser
+* feste Nahrung
+
+Energiespeicherung
+==================
+
+Das Problem der Energiespeicherung am Heres ist ein sehr wichtiges.
+Es entsteht dadurch, dass Menschen ein continuous-life-support-system brauchen.
+Das bedeutet auch, dass Energie dauerhaft zur Verfügung steht.
+
+Zuerst müssen relevante Parameter bestimmt werden.
+Wie viel Energie muss dauerhaft zur Verfügung stehen?
+Glücklicherweise können wir das relativ einfach abschätzen.
+Es gibt nicht so viele Variablen, die berücksichtigt werden müssen.
+Wenn wir für jede einzelne Variable den Energiebedarf berechnen,
+dann können wir den Gesamtenergiebedarf berechnen.
+
+Die Temperatur wird konstant gehalten vor allem durch die Wärmekapazität
+der Luft und des Wohnraumes.
+Da im Starship etwa 1000 m³ Luft bei 200 mbar vorhanden sind,
+liegt die Wärmekapazität vergleichbar mit 200 kg Wasser.
+Das ist nicht sehr viel, aber auch nicht sehr wenig.
+Es gibt eine kontinuierliche Wärmequelle,
+und das sind die Menschen.
+Ein Mensch heizt die Luft im Mittel mit etwa 100 W auf.
+Dagegen gibt es Verluste an die Umgebung.
+Diese beiden müssen im Gleichgewicht stehen.
+Die Verluste an die Umgebung können durch bessere Isolierung kontrolliert werden.
+Das bedeutet, dass es idealerweise überhaupt keinen aktiven Energieaufwand braucht,
+um die Temperatur in einem angenehmen Bereich zu halten.
+
+Die nächste wichtige Variable ist der Sauerstoff-Partialdruck.
+Die Herstellung von Sauerstoff aus CO2 erfordert Energie.
+Mögliche Prozesse sind die direkte Reduktion und andere Prozesse.
+Jedenfalls braucht die Herstellung von Sauerstoff Energie,
+die Lagerung dagegen nicht.
+Es ist also möglich, dass Sauerstoff an Energiereichen Tagen hergestellt wird,
+und dann eingelagert wird.
+Dadurch könnten Reserven angelegt werden, die so groß sind,
+dass auch bis zu 100 Tage ohne Sauerstoffherstellung überbrückt werden können.
+Der Tank des Starship umfasst etwa 2000 m³.
+Wenn dieser Tank mit 10 bar Sauerstoff befüllt wird,
+dann sind das 20 000 kg Sauerstoff.
+Bei einer 20 Mensch Besatzung sind das genug für 1000 Tage.
+Das sollte jedenfalls genug Zeit sein, bis die Sandstürme wieder vorüber sind.
+
+Dann kommt Wasser. Glücklicherweise braucht die Speicherung von Wasser kaum Energie.
+Also ist dieser Punkt hinfällig.
+
+Dann kommt die Nahrung. Dabei gibt es zwei Fälle: Getreide und Gemüse.
+Getreide kann in großen Mengen lange Zeit gespeichert werden.
+Dies ist erprobt und wenig problematisch.
+Beim Gemüse ist dies etwas schwieriger.
+Durch die CO2-Atmosphäre und die niedrigen Außentemperaturen
+könnte aber Gemüse, das draußen gelagert wird,
+wesentlich länger haltbar sein.
+Damit könnten einige Tage überbrückt werden,
+sodass das Gemüse länger frisch bleibt
+und eine Versorgung der Besatzung sichergestellt werden könnte.
+Jedenfalls fällt dafür kaum Energie an.
+
+Damit sieht man, dass der Gesamtenergieverbrauch
+in Zeiten, in denen Energie sehr teuer ist,
+auf einen sehr niedrigen Wert gesenkt werden kann.
+Die Energie muss dann halt in besseren Zeiten zur Verfügung gestellt werden.
+Dadurch kann die Notwendigkeit, Energie zu speichern,
+weitestgehend verhindert werden.
+
+Darum ist es wahrscheinlich ausreichend,
+die Mission ausschließlich mit Solarzellen zu betreiben.
+
+
+
+
+Power to Liquid (PtL)
+=====================
+
+Zielsetzung:
+
+Herstellung von flüssigem Öl, um daraus Plastik herstellen zu können.
+Die einzigen zwei nützlichen Baumaterialien am Mars sind Metall und Plastik.
+
+Darum empfiehlt es sich, das Thema der Plastikherstellung am Mars zu untersuchen.
+Der grundsätzliche Weg ist: Sabatier-prozess --> Methan/Öl --> Plastik.
+Dazu braucht es nur H2O + CO2 + Energie.
+
+Dazu braucht es keine Pflanzen.
+Die hohe CO2-Konzentration der Atmosphäre macht den Sabatier-Prozess wirtschaftlich.
+
+
+
+Öl wird zuerst einmal nur als baumaterial gebraucht,
+bis der planet terraformiert ist. also nicht in den ersten 30 000 tagen.
+
+
+
+Man braucht:
+* Elektrischen Strom, Wasser
+* Kohlenstoffquelle (z.B. Pflanzenkohle)
+
+Zuerst stellt man Wasserstoff her.
+Dann gibt man Kohle und Wasserstoff in einen Behälter.
+Die Kohle muss auf einem Gestell stehen, das über dem Boden ist.
+Man erhitzt auf 400°C und setzt unter mehr als 26.7 bar Druck.
+Es entstehen Gase und Flüssigkeiten.
+Die Flüssigkeiten tropfen zu Boden.
+Dort kann man sie absammeln, abkühlen und auf Normaldruck bringen.
+Fertig.
+
+
