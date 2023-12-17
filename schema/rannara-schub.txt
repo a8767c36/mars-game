@@ -1,0 +1,11 @@
+## Wie berechnet man den Schub eines Raketentriebwerks?
+
+* Ganz einfach: mit Physik :-)
+
+* wir stellen uns vor, dass das Raketentriebwerk ein Zylinder ist.
+* Oben (z = 0) kommt Treibstoff hinein, der wird entzündet und heiß.
+* Dadurch dehnt er sich aus, bekommt eine Geschwindigkeit und schießt hinten hinaus.
+* Die Frage ist, wie berechnet man die Geschwindigkeit?
+
+Idealerweise ohne numerische Simulation.
+

@@ -1,3 +1,5 @@
+changeScene("map");
+
 window.addEventListener("keydown", function (evt) {
 	if (evt.key == "b")
 		changeScene("base");

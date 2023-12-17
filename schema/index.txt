@@ -1,4 +1,5 @@
-<!--
+
+
 anordnung inventory:
 
 die anordnung im inventar ist im wesentlichen die zerfällung der wirklichkeit in industrie und biologie.
@@ -21,9 +22,3 @@ minerals:
 * siedlungsraum
 * baumaterial
  battery (redox)
--->
-
-
-
-
-
