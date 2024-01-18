@@ -1,6 +1,6 @@
 
 window.changeScene = changeScene;
-changeScene(location.hash ? location.hash.slice(1) : "herz")
+changeScene(location.hash ? location.hash.slice(1) : "DRM")
 
 async function changeScene(name) {
 	location.hash = name;
