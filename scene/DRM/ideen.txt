@@ -1,11 +1,12 @@
-<!-- hier sollte sein:
+hier sollte sein:
 zuerst eine übersicht über den raum
 dann eine möglichkeit, roboter zu bauen/programmieren (dharma)
 
 dann landwirtschaft (Acker)
--->
 
-<!-- ideen:
+
+
+ideen:
 
 * icon: matrix / tabelle / dienstplan / sheet-music
 
@@ -26,9 +27,10 @@ eine besondere aufgabe ist die bewahrung des raumes
 . maschinen können jeweils einem bestimmten raum zugeordnet werden
 . das ist der dienstplan
 
--->
 
-<a href="#herz/acker">gehe zum acker</a><br>
 
-<a href="#herz/dao"> gehe zur karte</a><br>
+wenn der user auf den DRM-bereich klickt,
+kommt er zuerst zu Dao,
+dann kann er von dort weiter zu R-acker.
+
 
